@@ -18,6 +18,7 @@ export default function AuthProvider({ children }) {
     }
 
     useEffect(() => {
+     
         const storedUser = localStorage.getItem("user");
         const storedToken = localStorage.getItem("token");
 
