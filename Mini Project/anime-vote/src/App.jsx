@@ -1,34 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [characters, setCharacters] = useState([
+    {
+      id: 1,
+      name: "Nagisa Kubo",
+      description: "Playful and loves teasting",
+      vote: 0,
+      favorite: false
+    },
+    {
+      id: 2,
+      name: "Junta Shiraishi",
+      description: "The invisible main character",
+      vote: 0,
+      favorite: false
+    },
+  ]);
+
+  const handleVote = (id) => {
+  setCharacters((prev) =>
+    prev.map((char) =>
+      char.id === id
+        ? { ...char, vote: char.vote + 1 }
+        : char
+    )
+  );
+};
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="grid grid-flow-col grid-rows-4 gap-4">
+      {
+        characters.map((char) => (
+          <div key={char.id} className="px-4 py-2 bg-slate-700 text-white">
+            <h1>{char.name}</h1>
+            <h2>{char.description}</h2>
+            <h3> Vote : {char.vote}</h3>
+            <button className="px-2 py-1 bg-white rounded text-black" onClick={() => handleVote(char.id)}>Vote</button>
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
