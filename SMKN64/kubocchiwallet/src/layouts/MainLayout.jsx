@@ -1,14 +1,15 @@
 import { Link, Outlet } from "react-router-dom";
+import kubo from "../assets/kubo.jpg";
 
 export default function MainLayout() {
   return (
-    <>
+    <div className="bg-[#f5ebf8] min-h-screen">
       {/* Navbar */}
       <header className="w-full flex justify-center pt-6">
         <nav className="bg-white rounded-full px-6 py-3 flex items-center justify-between w-[90%] max-w-5xl shadow-sm">
           <Link to={"/"} className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-[#6d35ff] flex items-center justify-center text-white font-bold">
-              P
+              <img className="rounded-full" src={kubo}/>
             </div>
           </Link>
 
@@ -41,6 +42,6 @@ export default function MainLayout() {
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }

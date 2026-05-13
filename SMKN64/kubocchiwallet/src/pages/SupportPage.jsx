@@ -1,12 +1,35 @@
 export default function SupportPage() {
   return (
-    <div className="text-center max-w-3xl px-6">
-      <h1 className="text-6xl font-bold text-[#4b2c66] mb-6">Explore Web3</h1>
+    <div className="bg-[#f5ebf8] min-h-screen flex items-center justify-center px-6">
+      <div className="bg-white p-10 rounded-3xl shadow-xl w-full max-w-xl">
+        <h1 className="text-4xl font-bold text-center text-[#4b2c66] mb-8">
+          Support Center
+        </h1>
 
-      <p className="text-lg text-gray-600 leading-relaxed">
-        Discover the latest crypto trends, NFTs, decentralized apps, and the
-        future of digital technology.
-      </p>
+        <form className="space-y-5">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-purple-400"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-purple-400"
+          />
+
+          <textarea
+            rows="5"
+            placeholder="Your Message"
+            className="w-full border border-gray-200 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-purple-400"
+          ></textarea>
+
+          <button className="w-full bg-purple-500 text-white py-4 rounded-2xl">
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

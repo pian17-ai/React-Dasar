@@ -6,6 +6,7 @@ import LearnPage from "../pages/LearnPage";
 import SupportPage from "../pages/SupportPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import { useRoutes } from "react-router-dom";
+import ExplorePage from "../pages/ExplorePage";
 
 export default function AppRoute() {
     const routes = [
@@ -28,6 +29,10 @@ export default function AppRoute() {
                 {
                     path: "support",
                     element: <SupportPage/>
+                },
+                {
+                    path: "explore",
+                    element: <ExplorePage/>
                 },
                 {
                     path: "*",
