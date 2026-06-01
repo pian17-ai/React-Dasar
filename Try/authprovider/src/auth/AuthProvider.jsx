@@ -28,7 +28,7 @@ export default function AuthProvider({ children }) {
 
         setLoading(false);
         
-    }, [setUser]);
+    }, []);
 
     return (
         <AuthContext.Provider value={{ user, loading, login, logout }}>
