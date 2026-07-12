@@ -1,8 +1,8 @@
+import ComponentPage from "./component/ComponentPage"
+
 function App() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Woii</h1>
-    </div>
+    <ComponentPage/>
   )
 }
 
