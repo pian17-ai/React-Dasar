@@ -1,18 +1,4 @@
-import type { ReactNode } from "react";
-
-type ButtonProps = {
-    variant?: string;
-    children?: ReactNode;
-}
-
-const Button = ({
-    variant = 'bg-black',
-    children = '...'
-}: ButtonProps) => {
-    return (
-        <button className={`h-10 px-6 font-semibold rounded-md ${variant} text-white`}>{children}</button>
-    )
-}
+import { Button } from "../atomicdesain/components/Elements/Button";
 
 function ComponentPage() {
   return (
