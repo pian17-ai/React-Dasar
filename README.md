@@ -21,4 +21,4 @@ plugins: [
 You can update in index.css or App.css
 ```css
 @import 'tailwindcss';
-```
+```   
