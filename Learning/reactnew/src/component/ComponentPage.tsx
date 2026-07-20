@@ -4,8 +4,8 @@ function ComponentPage() {
   return (
     <>
     <div className="flex gap-x-3">
-        <Button variant="bg-red-700">Hallo</Button>
-        <Button variant="bg-slate-700">Kubo</Button>
+        <Button className="bg-red-700">Hallo</Button>
+        <Button className="bg-slate-700">Kubo</Button>
         <Button></Button>
     </div>
     </>

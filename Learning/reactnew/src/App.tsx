@@ -1,9 +1,9 @@
-import ComponentPage from "./component/ComponentPage"
+import LoginPage from "./atomicdesain/pages/login";
 
 function App() {
   return (
-    <ComponentPage/>
-  )
+    <LoginPage/>
+  );
 }
 
-export default App
+export default App;
