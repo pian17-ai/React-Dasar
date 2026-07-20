@@ -2,9 +2,11 @@ import FormLogin from "../components/Fragments/FormLogin";
 import AuthLayouts from "../components/Layouts/AuthLayouts";
 
 const LoginPage = () => {
-    <AuthLayouts>
+    return (
+    <AuthLayouts title="Login Page">
         <FormLogin/>
     </AuthLayouts>
+    )
 }
 
 export default LoginPage;

@@ -1,8 +1,11 @@
 import LoginPage from "./atomicdesain/pages/login";
+import RegisterPage from "./atomicdesain/pages/register";
 
 function App() {
   return (
-    <LoginPage/>
+    <RegisterPage/>
+
+    // <LoginPage/>
   );
 }
 
